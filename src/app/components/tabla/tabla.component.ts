@@ -12,7 +12,6 @@ export class TablaComponent {
   @Output() eliminarTarea = new EventEmitter<string>();
 
   completar(tarea: Tarea): void {
-    console.log('tarea a completar: ', tarea);
     this.completarTarea.emit(tarea.id);
   }
 

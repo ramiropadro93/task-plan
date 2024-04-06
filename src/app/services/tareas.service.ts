@@ -16,7 +16,6 @@ export class TareasService {
   createTarea(tarea: Tarea): void {
     let tareas = JSON.parse(localStorage.getItem('tareas') || '[]');
     tarea.id = uuidv4();
-    console.log('tarea a crear: ', tarea);
     if (tarea.prioridad == 1) tareas.unshift(tarea);
     else tareas.push(tarea);
 

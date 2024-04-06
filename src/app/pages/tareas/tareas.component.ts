@@ -34,6 +34,9 @@ export class TareasComponent {
     schedule.scheduleJob('0 0 * * *', function(){
       that.limpiezaTareas();
     });
+    setTimeout(() => {
+      this.limpiezaTareas();
+    }, 5000);
   }
 
   crearTarea(tarea: any): void {

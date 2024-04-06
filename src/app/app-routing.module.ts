@@ -3,17 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'tareas',
+    path: '',
     loadChildren: () => import('./pages/tareas/tareas.module').then(m => m.TareasModule)
   },
   {
     path: '',
-    redirectTo: 'tareas',
+    redirectTo: '',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'tareas'
+    redirectTo: ''
   }
 ];
 
