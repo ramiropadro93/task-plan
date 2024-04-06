@@ -1,0 +1,16 @@
+<div class="container">
+  <app-crear-tarea-modal
+    *ngIf="showModalCreacionTarea"
+    (creacionTarea)="crearTarea($event)"
+    (cerrarModal)="cerrarModalCreacionTarea()"
+  ></app-crear-tarea-modal>
+  <h1 class="text-center">Tareas</h1>
+  <div class="btn-div">
+    <app-create-tarea-btn
+      (habilitarCrearTarea)="habilitarCrearTarea()"
+      class="crear-tarea-btn"
+    ></app-create-tarea-btn>
+  </div>
+  <h2>{{fechaHoy}}</h2>
+  <app-tabla [elementos]="tareas" (completarTarea)="completarTarea($event)" (eliminarTarea)="eliminarTarea($event)"></app-tabla>
+</div>

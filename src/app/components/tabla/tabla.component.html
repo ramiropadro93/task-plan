@@ -1,0 +1,29 @@
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Fecha creación</th>
+      <th>Recurrente</th>
+      <th>Completada</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of elementos">
+      <td [ngClass]="e.completada ? 'texto-tachado' : 'text-normal'">{{ e.titulo }}</td>
+      <td [ngClass]="e.completada ? 'texto-tachado' : 'text-normal'">{{ e.fechaCreacion }}</td>
+      <td class="td-medium">{{ e.recurrente ? 'Si' : 'No' }}</td>
+      <td class="td-medium checkbox">
+        <input
+          type="checkbox"
+          [checked]="e.completada"
+          class="completada-checkbox"
+          (change)="completar(e)"
+        />
+      </td>
+      <td class="td-medium">
+        <button (click)="eliminar(e)" class="eliminar-btn">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

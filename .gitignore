@@ -128,3 +128,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Angular
+dist/
+tmp/
+.vscode
+node_modules/
+.angular/
+.editorconfig
+.tsconfig.spec.json
