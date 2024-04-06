@@ -1,4 +1,5 @@
-# task-plan
+# Planificador de tareas
+
 Sistema para manejar tareas recurrentes y no recurrentes del día a día. 
 
 Sistema desarrollado exclusivamente en Angular 17. 
